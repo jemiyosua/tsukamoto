@@ -83,7 +83,7 @@ if (isset($_POST["submit"])) {
 			$value_sedang = 0;
 			$value_tebal = 0;
 		}
-		if ($kian > 3 && $kain < 5) {
+		if ($kain > 3 && $kain < 5) {
 			$value_tipis = (5-$kain)/(5-3);
 			$value_sedang = ($kain - 3)/(5-3);
 			$value_tebal = 0;
@@ -210,6 +210,8 @@ if (isset($_POST["submit"])) {
 		FungsiInferensiBanyak($value_tebal, $value_tinggi, $value_gelap, $value_ringan);
 		FungsiInferensiBanyak($value_tebal, $value_tinggi, $value_gelap, $value_berat);
 
+		$perkalian_new = 0;
+		$pembagian_new = 0;
 		for ($k=0; $k < count($takaran); $k++) { 
 			$perkalian = $takaran[$k][0]*$takaran[$k][1];
 			$pembagian = $takaran[$k][0];
